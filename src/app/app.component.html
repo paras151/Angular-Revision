@@ -1,5 +1,5 @@
 <div>
   <h1>Hello Angular</h1>
   <app-centered-h1></app-centered-h1>
-  <app-dtbn></app-dtbn>
+  <app-dtbn [item]="itemVal" (upper) = "onReceiveFromDtbn($event)"></app-dtbn>
 </div>

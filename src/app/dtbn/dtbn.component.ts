@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,10 +8,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './dtbn.component.html',
   styleUrl: './dtbn.component.css'
 })
+
 export class DtbnComponent {
+  @Input()
+  item=""
+
+  @Output('upper')
+  emitter: EventEmitter<string> = new EventEmitter<string>()
+  
   val = "Hi there"
 
   onOk = ()=>{
     alert("Clicked")
+  }
+
+  onUpper = () => {
+    alert("On upper called");
+    this.emitter.emit("called")
   }
 }

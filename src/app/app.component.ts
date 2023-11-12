@@ -15,4 +15,9 @@ import { DtbnComponent } from './dtbn/dtbn.component';
 })
 export class AppComponent {
   title = 'angular-rev-aniruddha';
+  itemVal = "Item property value"
+
+  onReceiveFromDtbn(st: string){
+    console.log(st);
+  }
 }
